@@ -1,0 +1,8 @@
+#Container image from Mobsfscan project on dockerHub as a base
+FROM:opensecurity/mobsfscan:latest
+
+#Copy my basic setup script for the GH Action during the container build
+COPY entrypoint.sh /entrypoint.sh
+
+Define the Container Execution on startup
+ENTRYPOINT ["/entrypoint.sh"]
