@@ -1,0 +1,16 @@
+# action.yml
+name: 'mobsfscan'
+description: 'Conduct scan of your mobile applications'
+inputs:
+  path:  # what to scan
+    description: 'What are we scanning'
+    required: true
+    default: '.'
+outputs:
+  results: # Results from scan
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
