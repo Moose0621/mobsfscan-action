@@ -1,5 +1,5 @@
 #Container image from Mobsfscan project on dockerHub as a base
-FROM:opensecurity/mobsfscan:latest
+FROM ghcr.io/cicirello/pyaction:latest
 
 #Copy my basic setup script for the GH Action during the container build
 COPY entrypoint.sh /entrypoint.sh
